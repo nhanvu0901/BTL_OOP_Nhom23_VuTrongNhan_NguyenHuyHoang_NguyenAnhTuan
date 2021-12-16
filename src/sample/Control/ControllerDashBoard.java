@@ -32,6 +32,7 @@ import java.util.ResourceBundle;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import modify.teacherModify;
+import sample.style.Style;
 
 
 public class ControllerDashBoard implements Initializable{
@@ -108,7 +109,9 @@ public class ControllerDashBoard implements Initializable{
 
     public void textChange(){// choice box event onKeyChange moi lan nhap ki tu se tim theo case ma chung ta chon
         String text = searchText.getText();
-
+        if(text.equals("")){
+            table.setItems(List);
+        }
         ObservableList<Teacher> teacherList = teacherModify.returnTeacher();
 
         switch (choiceBox.getValue())
@@ -225,8 +228,22 @@ public class ControllerDashBoard implements Initializable{
     }
     @FXML
     private void Close(MouseEvent event){
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.hide();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirm");
+        alert.setContentText("Bạn có muốn thoát chương trình ?");
+        ButtonType okButton = new ButtonType("Yes", ButtonBar.ButtonData.YES);
+
+        ButtonType cancelButton = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
+        alert.getButtonTypes().setAll(okButton, cancelButton);
+        alert.showAndWait().ifPresent(type -> {
+            if (type == okButton) {
+                stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                stage.hide();
+            } else {
+                alert.close();
+            }
+        });
+
     }
 
 }
