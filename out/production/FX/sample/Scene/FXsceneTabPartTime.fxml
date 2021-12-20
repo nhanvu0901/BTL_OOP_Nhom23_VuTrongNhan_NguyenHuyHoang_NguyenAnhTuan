@@ -69,14 +69,14 @@
                         <font>
                             <Font size="16.0" />
                         </font></Label>
-                    <JFXButton id="buttonAdd" fx:id="buttonAdd" layoutX="476.0" layoutY="242.0" mnemonicParsing="false" onAction="#addUser" prefHeight="25.0" prefWidth="141.0" ripplerFill="#121211" stylesheets="@../style/style.css" text="Add Giáo Viên">
+                    <JFXButton id="buttonAdd" fx:id="buttonAdd" buttonType="RAISED" layoutX="476.0" layoutY="242.0" mnemonicParsing="false" onAction="#addUser" prefHeight="25.0" prefWidth="141.0" ripplerFill="#121211" stylesheets="@../style/style.css" text="Add Giáo Viên">
                         <tooltip><Tooltip text="my tooltip" /></tooltip>
                     </JFXButton>
-                    <JFXButton id="buttonUpdate" fx:id="buttonUpdate" layoutX="224.0" layoutY="242.0" mnemonicParsing="false" onAction="#editUser" prefHeight="25.0" prefWidth="138.0" ripplerFill="#d2b93b" styleClass="root" stylesheets="@../style/style.css" text="Update Giáo Viên">
+                    <JFXButton id="buttonUpdate" fx:id="buttonUpdate" buttonType="RAISED" layoutX="224.0" layoutY="242.0" mnemonicParsing="false" onAction="#editUser" prefHeight="25.0" prefWidth="138.0" ripplerFill="#d2b93b" styleClass="root" stylesheets="@../style/style.css" text="Update Giáo Viên">
                   <tooltip>
                      <Tooltip text="Kích chuột vào hàng muốn sửa trong bảng để sửa " />
                   </tooltip></JFXButton>
-                    <JFXButton id="buttonDelete" fx:id="buttonDelete" layoutX="728.0" layoutY="242.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="25.0" prefWidth="147.0" ripplerFill="#e4c839" styleClass="root" stylesheets="@../style/style.css" text="Xóa Giáo Viên">
+                    <JFXButton id="buttonDelete" fx:id="buttonDelete" buttonType="RAISED" layoutX="728.0" layoutY="242.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="25.0" prefWidth="147.0" ripplerFill="#e4c839" styleClass="root" stylesheets="@../style/style.css" text="Xóa Giáo Viên">
                   <tooltip>
                      <Tooltip text="Kích chuột vào hàng muốn xóa trong bảng và ấn nút xóa" />
                   </tooltip></JFXButton>

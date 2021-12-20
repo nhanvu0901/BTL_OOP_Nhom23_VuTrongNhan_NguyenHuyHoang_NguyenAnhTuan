@@ -67,13 +67,13 @@
                         <font>
                             <Font size="15.0" />
                         </font></Label>
-                    <JFXButton id="buttonAdd" fx:id="buttonAdd" layoutX="498.0" layoutY="244.0" mnemonicParsing="false" onAction="#addUser" prefHeight="25.0" prefWidth="141.0" ripplerFill="#423f3e" stylesheets="@../style/style.css" text="Add Giáo Viên" />
-                    <JFXButton id="buttonUpdate" fx:id="buttonUpdate" layoutX="258.0" layoutY="244.0" mnemonicParsing="false" onAction="#editUser" prefHeight="25.0" prefWidth="138.0" ripplerFill="#9a9890" styleClass="root" stylesheets="@../style/style.css" text="Update Giáo Viên">
+                    <JFXButton id="buttonAdd" fx:id="buttonAdd" buttonType="RAISED" layoutX="498.0" layoutY="244.0" mnemonicParsing="false" onAction="#addUser" prefHeight="25.0" prefWidth="141.0" ripplerFill="#423f3e" stylesheets="@../style/style.css" text="Add Giáo Viên" />
+                    <JFXButton id="buttonUpdate" fx:id="buttonUpdate" buttonType="RAISED" layoutX="258.0" layoutY="244.0" mnemonicParsing="false" onAction="#editUser" prefHeight="25.0" prefWidth="138.0" ripplerFill="#9a9890" styleClass="root" stylesheets="@../style/style.css" text="Update Giáo Viên">
                         <tooltip>
                             <Tooltip text="Chọn id hàng bạn muốn sử" />
                         </tooltip>
                     </JFXButton>
-                    <JFXButton id="buttonDelete" fx:id="buttonDelete" layoutX="739.0" layoutY="244.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="25.0" prefWidth="147.0" ripplerFill="#9a9890" styleClass="root" stylesheets="@../style/style.css" text="Xóa Giáo Viên">
+                    <JFXButton id="buttonDelete" fx:id="buttonDelete" buttonType="RAISED" layoutX="739.0" layoutY="244.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="25.0" prefWidth="147.0" ripplerFill="#9a9890" styleClass="root" stylesheets="@../style/style.css" text="Xóa Giáo Viên">
                       <tooltip>
                          <Tooltip text="Chọn id hàng bạn muốn sử" />
                       </tooltip>

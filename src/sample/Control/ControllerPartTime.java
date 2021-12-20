@@ -222,7 +222,7 @@ public class ControllerPartTime implements Initializable{
         String phone = phoneText.getText();
         String hourTxt = hourText.getText();
         int IDPartTime = (int) IDChoiceBox.getValue();
-        if(name == "" && schoolYearTxt =="" && specialty=="" && phone==""&& hourTxt==""){
+        if(name == "" && schoolYearTxt =="" && specialty=="" && phone==""&& hourTxt=="" && IDChoiceBox.getValue() == ""){
             Style.setDanger(nameText,nameLabel,inform);
             Style.setDanger(teachAtSchoolYearText,teachAtSchoolYearLabel,inform);
             Style.setDanger(specialtyText,specialtyLabel,inform);
