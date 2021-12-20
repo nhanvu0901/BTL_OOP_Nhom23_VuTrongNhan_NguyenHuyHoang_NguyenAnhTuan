@@ -221,7 +221,7 @@ public class ControllerFullTime  implements Initializable{
 
             Style.setInform(inform,"Bảng chưa có dữ liệu để update");
             Notifications notifications = Notifications.create()
-                    .title("Thành công")
+                    .title("Không thành công")
                     .text("Bảng chưa có dữ liệu để update")
                     .hideAfter(Duration.seconds(3))
                     .position(Pos.TOP_CENTER)
@@ -270,7 +270,7 @@ public class ControllerFullTime  implements Initializable{
 
              Style.setInform(inform,"Không được để trống ID");
              Notifications notifications = Notifications.create()
-                     .title("Thành công")
+                     .title("Không thành công")
                      .text("Không để trống dòng ID")
                      .hideAfter(Duration.seconds(3))
                      .position(Pos.TOP_CENTER)

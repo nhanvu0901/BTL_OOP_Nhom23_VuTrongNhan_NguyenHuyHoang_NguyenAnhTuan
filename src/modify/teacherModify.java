@@ -14,7 +14,7 @@ public class teacherModify {
     public teacherModify() {
     }
 
-    public void addTeacher(Teacher teacher){
+    public void addTeacher(Teacher teacher){ // upcasting fullTime or partTime teacher
         TeacherList.add(teacher);
         if(teacher.GetKind() == "Full Time"){
             fullTimeTeacher teacher1 = (fullTimeTeacher) teacher;
@@ -35,14 +35,14 @@ public class teacherModify {
                 break;
             }
         }
+
         for (int i = 0; i < TeacherList.size(); i++) { //delete main table
             if(TeacherList.get(i).GetKind().equals("Full Time")){
                 fullTimeTeacher teacher1 = (fullTimeTeacher) TeacherList.get(i);
-                if(teacher1.getIdFullTime() == teacher.getIdFullTime()){
+                if(teacher1.getIdFullTime() == teacher.getIdFullTime()) {
                     TeacherList.remove(TeacherList.get(i));
                     break;
                 }
-                break;
             }
         }
     }
@@ -60,7 +60,6 @@ public class teacherModify {
                     TeacherList.remove(TeacherList.get(i));
                     break;
                 }
-                break;
             }
         }
     }
@@ -73,6 +72,7 @@ public class teacherModify {
                 TeacherFullTimeList.get(i).setSpecialty(specialty);
                 TeacherFullTimeList.get(i).setPhoneNumber(phoneNumber);
                 TeacherFullTimeList.get(i).setCoefficient(coefficient);
+                TeacherFullTimeList.get(i).setSalary(salary);
                 break;
             }
             for (int j = 0; j < TeacherList.size(); j++) {
@@ -97,6 +97,7 @@ public class teacherModify {
                 TeacherPartTimeList.get(i).setSpecialty(specialty);
                 TeacherPartTimeList.get(i).setPhoneNumber(phoneNumber);
                 TeacherPartTimeList.get(i).setTeachingHour(teachingHour);
+                TeacherPartTimeList.get(i).setSalary(salary);
                 break;
             }
             for (int j = 0; j < TeacherList.size(); j++) {

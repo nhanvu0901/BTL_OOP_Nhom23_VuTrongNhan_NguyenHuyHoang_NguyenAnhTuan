@@ -200,17 +200,7 @@ public class ControllerDashBoard implements Initializable{
             UpdateTable();
             int total = table.getItems().size();
             totalNum.setText(String.valueOf(total));
-//            int totalFullTime = teacherModify.findTotalFullTimeTeacher();
-//            totalNumFullTime.setText(String.valueOf(totalFullTime));
-//            int totalPartTime = teacherModify.findTotalPartTimeTeacher();
-//            totalNumPartTime.setText(String.valueOf(totalPartTime));
 
-//            int total = table.getItems().size();
-//            totalNum.setText(String.valueOf(total));
-//            int totalFullTime = fullTimeTeacher.getTotalSumOfFullTime();
-//            totalNumFullTime.setText(String.valueOf(totalFullTime));
-//            int totalPartTime = partTimeTeacher.getTotalSumOfPartTime();
-//            totalNumPartTime.setText(String.valueOf(totalPartTime));
         }
         if (actionEvent.getSource() == btnFullTimetable) {
 

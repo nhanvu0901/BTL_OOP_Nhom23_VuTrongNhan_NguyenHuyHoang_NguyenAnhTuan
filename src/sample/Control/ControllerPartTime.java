@@ -280,7 +280,7 @@ public class ControllerPartTime implements Initializable{
         if(IDChoiceBox.getValue().equals(0)){
             Style.setInform(inform,"Không được để trống ID");
             Notifications notifications = Notifications.create()
-                    .title("Thành công")
+                    .title("Không thành công")
                     .text("Không để trống dòng ID")
                     .hideAfter(Duration.seconds(3))
                     .position(Pos.TOP_CENTER)

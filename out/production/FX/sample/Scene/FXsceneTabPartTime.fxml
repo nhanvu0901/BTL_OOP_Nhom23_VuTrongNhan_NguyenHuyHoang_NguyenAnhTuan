@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -20,11 +20,11 @@
         <StackPane prefHeight="680.0" prefWidth="996.0">
             <children>
                 <Pane fx:id="pnlPartTime" prefHeight="680.0" prefWidth="905.0">
-                    <Label fx:id="nameLabel" layoutX="20.0" layoutY="73.0" prefHeight="17.0" prefWidth="102.0" text="Tên giáo viên" textFill="WHITE">
+                    <Label fx:id="nameLabel" layoutX="20.0" layoutY="73.0" prefHeight="17.0" prefWidth="102.0" text="Tên giáo viên:" textFill="WHITE">
                         <font>
                             <Font size="16.0" />
                         </font></Label>
-                    <Label fx:id="teachAtSchoolYearLabel" layoutX="362.0" layoutY="73.0" text="Năm về trường" textFill="#fff8f8">
+                    <Label fx:id="teachAtSchoolYearLabel" layoutX="362.0" layoutY="73.0" text="Năm về trường:" textFill="#fff8f8">
                         <font>
                             <Font size="16.0" />
                         </font></Label>
@@ -32,11 +32,11 @@
                     <JFXTextField fx:id="nameText" focusColor="#35f668" labelFloat="true" layoutX="129.0" layoutY="73.0" promptText="Nhập tên giáo viên" stylesheets="@../style/style.css" unFocusColor="#03f6d6" />
 
                     <JFXTextField fx:id="teachAtSchoolYearText" focusColor="#35f668" labelFloat="true" layoutX="487.0" layoutY="73.0" promptText="Nhập năm về trường" stylesheets="@../style/style.css" unFocusColor="#03f6d6" />
-                    <Label fx:id="specialtyLabel" layoutX="712.0" layoutY="73.0" text="Chuyên môn" textFill="#fffefe">
+                    <Label fx:id="specialtyLabel" layoutX="712.0" layoutY="73.0" text="Chuyên môn:" textFill="#fffefe">
                         <font>
                             <Font size="16.0" />
                         </font></Label>
-                    <Label fx:id="phoneLabel" layoutX="20.0" layoutY="141.0" prefHeight="25.0" prefWidth="102.0" text="Số điện thoại" textFill="#fffefe">
+                    <Label fx:id="phoneLabel" layoutX="20.0" layoutY="141.0" prefHeight="25.0" prefWidth="102.0" text="Số điện thoại:" textFill="#fffefe">
                         <font>
                             <Font size="16.0" />
                         </font></Label>
@@ -45,22 +45,22 @@
                     <JFXTextField fx:id="phoneText" focusColor="#35f668" labelFloat="true" layoutX="129.0" layoutY="141.0" promptText="Nhấp số điện thoại" stylesheets="@../style/style.css" unFocusColor="#03f6d6" />
 
                     <JFXTextField fx:id="hourText" focusColor="#35f668" labelFloat="true" layoutX="487.0" layoutY="141.0" promptText="Nhập số giờ giảng dạy" stylesheets="@../style/style.css" unFocusColor="#03f6d6" />
-                    <Label fx:id="hourLabel" layoutX="356.0" layoutY="141.0" text="Số giờ giảng dạy" textFill="#fff9f9">
+                    <Label fx:id="hourLabel" layoutX="356.0" layoutY="141.0" text="Số giờ giảng dạy:" textFill="#fff9f9">
                         <font>
                             <Font size="16.0" />
                         </font></Label>
                     <TableView fx:id="table1" layoutY="317.0" onMouseClicked="#getSelected" prefHeight="363.0" prefWidth="996.0" stylesheets="@../style/style.css">
                         <columns>
-                            <TableColumn fx:id="col_id" prefWidth="63.0" text="ID" style=" -fx-alignment: CENTER"/>
-                            <TableColumn fx:id="col_name" prefWidth="175.0" text="Tên" style=" -fx-alignment: CENTER"/>
-                            <TableColumn fx:id="col_teachAtSchoolYear" prefWidth="108.0" text="Năm về trường" style=" -fx-alignment: CENTER"/>
-                            <TableColumn fx:id="col_specialty" prefWidth="175.0" text="Chuyên môn" style=" -fx-alignment: CENTER"/>
-                            <TableColumn fx:id="col_phone" prefWidth="136.33334350585938" text="Số điện thoại" style=" -fx-alignment: CENTER"/>
-                            <TableColumn fx:id="col_salary" prefWidth="190.33331298828125" text="Lương/tháng" style=" -fx-alignment: CENTER"/>
-                            <TableColumn fx:id="col_hour" prefWidth="150.66668701171875" text="Số giờ giảng dạy" style=" -fx-alignment: CENTER"/>
+                            <TableColumn fx:id="col_id" prefWidth="63.0" style=" -fx-alignment: CENTER" text="ID" />
+                            <TableColumn fx:id="col_name" prefWidth="175.0" style=" -fx-alignment: CENTER" text="Tên" />
+                            <TableColumn fx:id="col_teachAtSchoolYear" prefWidth="108.0" style=" -fx-alignment: CENTER" text="Năm về trường" />
+                            <TableColumn fx:id="col_specialty" prefWidth="175.0" style=" -fx-alignment: CENTER" text="Chuyên môn" />
+                            <TableColumn fx:id="col_phone" prefWidth="136.33334350585938" style=" -fx-alignment: CENTER" text="Số điện thoại" />
+                            <TableColumn fx:id="col_salary" prefWidth="190.33331298828125" style=" -fx-alignment: CENTER" text="Lương/tháng" />
+                            <TableColumn fx:id="col_hour" prefWidth="150.66668701171875" style=" -fx-alignment: CENTER" text="Số giờ giảng dạy" />
                         </columns>
                     </TableView>
-                    <Label layoutX="712.0" layoutY="141.0" text="Lương" textFill="#fffdfd">
+                    <Label layoutX="712.0" layoutY="141.0" text="Lương:" textFill="#fffdfd">
                         <font>
                             <Font size="16.0" />
                         </font></Label>
@@ -69,17 +69,17 @@
                         <font>
                             <Font size="16.0" />
                         </font></Label>
-                    <Button id="buttonAdd" fx:id="buttonAdd" layoutX="476.0" layoutY="242.0" mnemonicParsing="false" onAction="#addUser" prefHeight="25.0" prefWidth="141.0" stylesheets="@../style/style.css" text="Add Giáo Viên">
+                    <JFXButton id="buttonAdd" fx:id="buttonAdd" layoutX="476.0" layoutY="242.0" mnemonicParsing="false" onAction="#addUser" prefHeight="25.0" prefWidth="141.0" ripplerFill="#121211" stylesheets="@../style/style.css" text="Add Giáo Viên">
                         <tooltip><Tooltip text="my tooltip" /></tooltip>
-                    </Button>
-                    <Button id="buttonUpdate" fx:id="buttonUpdate" layoutX="224.0" layoutY="242.0" mnemonicParsing="false" onAction="#editUser" prefHeight="25.0" prefWidth="138.0" styleClass="root" stylesheets="@../style/style.css" text="Update Giáo Viên">
+                    </JFXButton>
+                    <JFXButton id="buttonUpdate" fx:id="buttonUpdate" layoutX="224.0" layoutY="242.0" mnemonicParsing="false" onAction="#editUser" prefHeight="25.0" prefWidth="138.0" ripplerFill="#d2b93b" styleClass="root" stylesheets="@../style/style.css" text="Update Giáo Viên">
                   <tooltip>
                      <Tooltip text="Kích chuột vào hàng muốn sửa trong bảng để sửa " />
-                  </tooltip></Button>
-                    <Button id="buttonDelete" fx:id="buttonDelete" layoutX="728.0" layoutY="242.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="25.0" prefWidth="147.0" styleClass="root" stylesheets="@../style/style.css" text="Xóa Giáo Viên">
+                  </tooltip></JFXButton>
+                    <JFXButton id="buttonDelete" fx:id="buttonDelete" layoutX="728.0" layoutY="242.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="25.0" prefWidth="147.0" ripplerFill="#e4c839" styleClass="root" stylesheets="@../style/style.css" text="Xóa Giáo Viên">
                   <tooltip>
                      <Tooltip text="Kích chuột vào hàng muốn xóa trong bảng và ấn nút xóa" />
-                  </tooltip></Button>
+                  </tooltip></JFXButton>
                     <Label layoutX="426.0" layoutY="14.0" prefHeight="45.0" prefWidth="241.0" text="Giáo viên thời vụ " textFill="WHITE">
                         <font>
                             <Font size="30.0" />
@@ -97,7 +97,7 @@
                         </image>
                     </ImageView>
 
-                    <Label fx:id="IDLabel" layoutX="712.0" layoutY="193.0" text="ID" textFill="#fffdfd">
+                    <Label fx:id="IDLabel" layoutX="712.0" layoutY="193.0" text="ID:" textFill="#fffdfd">
                         <font>
                             <Font size="16.0" />
                         </font>

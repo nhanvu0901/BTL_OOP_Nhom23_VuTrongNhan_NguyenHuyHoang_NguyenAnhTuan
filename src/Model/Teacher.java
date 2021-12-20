@@ -10,22 +10,7 @@ public class Teacher {
 
      private static int count =0;
 
-    public Teacher(String name, int teachAtSchoolYear, String specialty, String phoneNumber, double salary) {
-        this.name = name;
-        this.teachAtSchoolYear = teachAtSchoolYear;
-        this.specialty = specialty;
-        this.phoneNumber = phoneNumber;
-        this.salary = salary;
-    }
 
-    public Teacher(int id, String name, int teachAtSchoolYear, String specialty, String phoneNumber) {
-        this.id = ++count;
-        this.name = name;
-        this.teachAtSchoolYear = teachAtSchoolYear;
-        this.specialty = specialty;
-        this.phoneNumber = phoneNumber;
-
-    }
 
 
 
@@ -39,17 +24,7 @@ public class Teacher {
     }
 
 
-    public Teacher(String name, String specialty, String phoneNumber) {
-        this.name = name;
-        this.specialty = specialty;
-        this.phoneNumber = phoneNumber;
-    }
 
-
-
-    public Teacher(int id) {
-        this.id = id;
-    }
 
     public Teacher(){};
 
@@ -108,12 +83,5 @@ public class Teacher {
         this.salary = salary;
     }
 
-//    public static void main(String[] args) {
-//        Teacher teacher = new Teacher("Nhan",2012,"Sinh","123123",1);
-//        Teacher teacher1 = new Teacher("Nhan",2012,"Sinh","123123",1);
-//        Teacher teacher2 = new Teacher("Nhan",2012,"Sinh","123123",1);
-//        System.out.println(teacher.getId());
-//        System.out.println(teacher1.getId());
-//        System.out.println(teacher2.getId());
-//    }
+
 }
