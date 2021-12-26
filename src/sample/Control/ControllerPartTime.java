@@ -194,25 +194,40 @@ public class ControllerPartTime implements Initializable{
                 int teachAtSchoolYear = Integer.parseInt(teachAtSchoolYearText.getText());
                 partTimeTeacher teacher = new partTimeTeacher(name, teachAtSchoolYear, specialty, phone, hour);
 
-                    Style.success(inform, "Insert database thanh cong!");
-                    double luong = teacher.getLuong();
-                    teacherModify.addTeacher(teacher);
-                    salaryText.setText(Double.toString(luong));
 
-                    Notifications notifications = Notifications.create()
-                            .title("Thành công")
-                            .text("Bạn đã thêm data thành công")
-                            .hideAfter(Duration.seconds(3))
-                            .position(Pos.TOP_CENTER)
-                            .graphic(new ImageView(imgSuccess));
-                    notifications.darkStyle();
-                    notifications.show();
-                    listID.add(teacher.getIdPartTime());
-                    updateChoiceBox();
+                    if( teacherModify.addTeacher(teacher) == false){
+                        Notifications notifications = Notifications.create()
+                                .title("Thành công")
+                                .text("Bạn đã thêm data thành công")
+                                .hideAfter(Duration.seconds(3))
+                                .position(Pos.TOP_CENTER)
+                                .graphic(new ImageView(imgSuccess));
+                        notifications.darkStyle();
+                        notifications.show();
+
+                        listID.add(teacher.getIdPartTime());
+                        updateChoiceBox();
+                        Style.success(inform, "Insert database thanh cong!");
+                        double luong = teacher.getLuong();
+                        salaryText.setText(Double.toString(luong));
+                        UpdateTable();
+                        clearText();
+                    }
+                    else{
+                        teacher.setCount(teacher.getIdPartTime()-1);
+                        teacher.setCountTeacher(teacher.getId()-1);
+                        Notifications notifications = Notifications.create()
+                                .title("Lỗi")
+                                .text("Thông tin của giáo viên đã được nhập trong bảng")
+                                .hideAfter(Duration.seconds(3))
+                                .position(Pos.TOP_CENTER)
+                                .graphic(new ImageView(imgError));
+                        notifications.darkStyle();
+                        notifications.show();
+                        clearText();
+                    }
 
 
-                    UpdateTable();
-                    clearText();
             }
     }
     public void editUser(ActionEvent actionEvent) throws IOException {

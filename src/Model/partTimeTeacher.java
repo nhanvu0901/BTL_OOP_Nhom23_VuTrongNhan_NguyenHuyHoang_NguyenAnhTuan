@@ -32,6 +32,14 @@ public class partTimeTeacher extends Teacher{
         return idPartTime;
     }
 
+    public static void setCount(int count) {
+        partTimeTeacher.count = count;
+    }
+
+    public void setIdPartTime(int idPartTime) {
+        this.idPartTime = idPartTime;
+    }
+
     public double getLuong(){ return teachingHour*500000 + 1000000;} //overidding
 
     public String GetKind(){

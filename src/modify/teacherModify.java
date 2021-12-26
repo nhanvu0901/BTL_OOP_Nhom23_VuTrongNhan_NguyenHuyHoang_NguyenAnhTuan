@@ -5,25 +5,45 @@ import Model.fullTimeTeacher;
 import Model.partTimeTeacher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.geometry.Pos;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.util.Duration;
+import org.controlsfx.control.Notifications;
+import sample.Main;
+
+import java.net.URL;
+
 //Vu Trong Nhan
 public class teacherModify {
     private static ObservableList<Teacher> TeacherList = FXCollections.observableArrayList();
     private static ObservableList<fullTimeTeacher> TeacherFullTimeList = FXCollections.observableArrayList();
     private static ObservableList<partTimeTeacher> TeacherPartTimeList = FXCollections.observableArrayList();
 
+
     public teacherModify() {
     }
 
-    public void addTeacher(Teacher teacher){ // upcasting fullTime or partTime teacher
-        TeacherList.add(teacher);
-        if(teacher.GetKind() == "Full Time"){
-            fullTimeTeacher teacher1 = (fullTimeTeacher) teacher; // dowcasting to fullTimeTeacher
-            TeacherFullTimeList.add(teacher1);
+    public boolean addTeacher(Teacher teacher){ // upcasting fullTime or partTime teacher
+        boolean flag = false ;
+        for (int i = 0; i < TeacherList.size(); i++) {
+            if(TeacherList.get(i).getName().equals(teacher.getName()) && TeacherList.get(i).getPhoneNumber().equals(teacher.getPhoneNumber()) && TeacherList.get(i).getSalary() == teacher.getSalary() && TeacherList.get(i).getSpecialty().equals(teacher.getSpecialty()) && TeacherList.get(i).getTeachAtSchoolYear() == teacher.getTeachAtSchoolYear()){
+                flag = true;
+                break;
+            }
         }
-        if(teacher.GetKind() == "Part Time"){
-            partTimeTeacher teacher1 = (partTimeTeacher) teacher;// dowcasting to partTimeTeacher
-            TeacherPartTimeList.add(teacher1);
+        if(flag == false){
+            TeacherList.add(teacher);
+            if(teacher.GetKind() == "Full Time"){
+                fullTimeTeacher teacher1 = (fullTimeTeacher) teacher; // dowcasting to fullTimeTeacher
+                TeacherFullTimeList.add(teacher1);
+            }
+            if(teacher.GetKind() == "Part Time"){
+                partTimeTeacher teacher1 = (partTimeTeacher) teacher;// dowcasting to partTimeTeacher
+                TeacherPartTimeList.add(teacher1);
+            }
         }
+       return flag;
     }
 
 

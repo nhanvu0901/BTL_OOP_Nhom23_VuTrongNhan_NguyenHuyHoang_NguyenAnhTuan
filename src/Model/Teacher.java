@@ -77,5 +77,7 @@ public class Teacher {
         this.salary = salary;
     }
 
-
+    public static void setCountTeacher(int count) {
+        Teacher.count = count;
+    }
 }

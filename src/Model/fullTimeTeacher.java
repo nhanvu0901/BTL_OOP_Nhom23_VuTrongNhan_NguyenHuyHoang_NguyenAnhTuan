@@ -47,6 +47,7 @@ public class fullTimeTeacher extends Teacher{
         return this.idFullTime;
     }
 
-
-
+    public static void setCount(int count) {
+        fullTimeTeacher.count = count;
+    }
 }

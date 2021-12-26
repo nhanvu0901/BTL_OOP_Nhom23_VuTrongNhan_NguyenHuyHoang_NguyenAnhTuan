@@ -175,26 +175,40 @@ public class ControllerFullTime  implements Initializable{
             int teachAtSchoolYear = Integer.parseInt(teachAtSchoolYearText.getText());
             fullTimeTeacher teacher = new fullTimeTeacher(name,teachAtSchoolYear,specialty,phone,coefficient);
 
-            double luong = teacher.getLuong();
-            teacherModify.addTeacher(teacher);
-            Style.success(inform, "Insert database thành công!");
-            salaryText.setText(Double.toString(luong));
+            if(teacherModify.addTeacher(teacher) == false){
+                double luong = teacher.getLuong();
 
+                Style.success(inform, "Insert database thành công!");
+                salaryText.setText(Double.toString(luong));
 
-            Notifications notifications = Notifications.create()
-                    .title("Thành công")
-                    .text("Bạn đã thêm data thành công")
-                    .hideAfter(Duration.seconds(3))
-                    .position(Pos.TOP_CENTER)
-                    .graphic(new ImageView(imgSuccess));
-            notifications.darkStyle();
-            notifications.show();
+                Notifications notifications = Notifications.create()
+                        .title("Thành công")
+                        .text("Bạn đã thêm data thành công")
+                        .hideAfter(Duration.seconds(3))
+                        .position(Pos.TOP_CENTER)
+                        .graphic(new ImageView(imgSuccess));
+                notifications.darkStyle();
+                notifications.show();
 
-            listID.add(teacher.getIdFullTime());
-            updateChoiceBox();
+                listID.add(teacher.getIdFullTime());
+                updateChoiceBox();
 
-            UpdateTable();
-            clearText();
+                UpdateTable();
+                clearText();
+            }
+            else{
+                teacher.setCount(teacher.getIdFullTime()-1);
+                teacher.setCountTeacher(teacher.getId()-1);
+                Notifications notifications = Notifications.create()
+                        .title("Lỗi")
+                        .text("Thông tin của giáo viên đã được nhập trong bảng")
+                        .hideAfter(Duration.seconds(3))
+                        .position(Pos.TOP_CENTER)
+                        .graphic(new ImageView(imgError));
+                notifications.darkStyle();
+                notifications.show();
+                clearText();
+            }
         }
     }
 
