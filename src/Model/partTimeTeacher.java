@@ -1,5 +1,5 @@
 package Model;
-
+//Nguyen Huy Hoang
 public class partTimeTeacher extends Teacher{
     private double teachingHour;
 
@@ -32,11 +32,11 @@ public class partTimeTeacher extends Teacher{
         return idPartTime;
     }
 
-    public double getLuong(){ return teachingHour*500000 + 1000000;}
+    public double getLuong(){ return teachingHour*500000 + 1000000;} //overidding
 
     public String GetKind(){
         return "Part Time";
-    }
+    } //overidding
 
 
 

@@ -1,5 +1,5 @@
 package Model;
-
+//Vu Trong Nhan
 public class Teacher {
      private int id;
      private String name;
@@ -11,10 +11,6 @@ public class Teacher {
      private static int count =0;
 
 
-
-
-
-
     public Teacher(String name, int teachAtSchoolYear, String specialty, String phoneNumber) { // cai dung de add
         this.id = ++count;
         this.name = name;
@@ -22,8 +18,6 @@ public class Teacher {
         this.specialty = specialty;
         this.phoneNumber = phoneNumber;
     }
-
-
 
 
     public Teacher(){};

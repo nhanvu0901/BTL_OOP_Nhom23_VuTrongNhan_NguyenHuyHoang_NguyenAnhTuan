@@ -1,5 +1,5 @@
 package Model;
-
+//Nguyen Anh Tuan
 public class fullTimeTeacher extends Teacher{
     private double coefficient;
 

@@ -1,5 +1,5 @@
 package sample.Control;
-
+//Nguyen Huy Hoang , Vu Trong Nhan
 
 import Model.Teacher;
 import Model.fullTimeTeacher;

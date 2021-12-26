@@ -5,7 +5,7 @@ import Model.fullTimeTeacher;
 import Model.partTimeTeacher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
+//Vu Trong Nhan
 public class teacherModify {
     private static ObservableList<Teacher> TeacherList = FXCollections.observableArrayList();
     private static ObservableList<fullTimeTeacher> TeacherFullTimeList = FXCollections.observableArrayList();
@@ -17,11 +17,11 @@ public class teacherModify {
     public void addTeacher(Teacher teacher){ // upcasting fullTime or partTime teacher
         TeacherList.add(teacher);
         if(teacher.GetKind() == "Full Time"){
-            fullTimeTeacher teacher1 = (fullTimeTeacher) teacher;
+            fullTimeTeacher teacher1 = (fullTimeTeacher) teacher; // dowcasting to fullTimeTeacher
             TeacherFullTimeList.add(teacher1);
         }
         if(teacher.GetKind() == "Part Time"){
-            partTimeTeacher teacher1 = (partTimeTeacher) teacher;
+            partTimeTeacher teacher1 = (partTimeTeacher) teacher;// dowcasting to partTimeTeacher
             TeacherPartTimeList.add(teacher1);
         }
     }

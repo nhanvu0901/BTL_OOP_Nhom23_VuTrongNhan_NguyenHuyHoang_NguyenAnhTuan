@@ -2,7 +2,6 @@
   <library name="controlsfx-11.1.0">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/controlsfx-11.1.0.jar!/" />
-      <root url="jar://$PROJECT_DIR$/lib/jfoenix-9.0.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
