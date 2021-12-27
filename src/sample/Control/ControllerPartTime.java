@@ -226,8 +226,6 @@ public class ControllerPartTime implements Initializable{
                         notifications.show();
                         clearText();
                     }
-
-
             }
     }
     public void editUser(ActionEvent actionEvent) throws IOException {
