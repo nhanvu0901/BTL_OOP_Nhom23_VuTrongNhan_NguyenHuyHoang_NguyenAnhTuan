@@ -195,7 +195,7 @@ public class ControllerPartTime implements Initializable{
                 partTimeTeacher teacher = new partTimeTeacher(name, teachAtSchoolYear, specialty, phone, hour);
 
 
-                    if( teacherModify.addTeacher(teacher) == false){
+                    if( teacherModify.addTeacher(teacher) == true){
                         Notifications notifications = Notifications.create()
                                 .title("Thành công")
                                 .text("Bạn đã thêm data thành công")
@@ -216,6 +216,7 @@ public class ControllerPartTime implements Initializable{
                     else{
                         teacher.setCount(teacher.getIdPartTime()-1);
                         teacher.setCountTeacher(teacher.getId()-1);
+
                         Notifications notifications = Notifications.create()
                                 .title("Lỗi")
                                 .text("Thông tin của giáo viên đã được nhập trong bảng")

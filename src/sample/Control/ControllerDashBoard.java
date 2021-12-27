@@ -109,9 +109,7 @@ public class ControllerDashBoard implements Initializable{
 
     public void textChange(){// choice box event onKeyChange moi lan nhap ki tu se tim theo case ma chung ta chon
         String text = searchText.getText();
-        if(text.equals("")){
-            table.setItems(List);
-        }
+
         ObservableList<Teacher> teacherList = teacherModify.returnTeacher();
 
         switch (choiceBox.getValue())
@@ -134,7 +132,7 @@ public class ControllerDashBoard implements Initializable{
                         userList.add(teacher);
                     }
                 }
-                table.setItems(userList); // Nếu không sử dụng database
+                table.setItems(userList);
                 break;
             case "Tìm kiếm lương lớn hơn số lương nhập vào":
                 data = teacherModify.returnSalaryList(Double.parseDouble(text.trim()));
@@ -142,6 +140,9 @@ public class ControllerDashBoard implements Initializable{
                 break;
             default:
                 table.setItems(List);
+        }
+        if(text.equals("")){
+            table.setItems(List);
         }
 
 

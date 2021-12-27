@@ -175,7 +175,7 @@ public class ControllerFullTime  implements Initializable{
             int teachAtSchoolYear = Integer.parseInt(teachAtSchoolYearText.getText());
             fullTimeTeacher teacher = new fullTimeTeacher(name,teachAtSchoolYear,specialty,phone,coefficient);
 
-            if(teacherModify.addTeacher(teacher) == false){
+            if(teacherModify.addTeacher(teacher) == true){
                 double luong = teacher.getLuong();
 
                 Style.success(inform, "Insert database thành công!");
